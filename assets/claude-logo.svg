@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Claude">
+  <rect width="64" height="64" rx="15" fill="#D97757"/>
+  <g transform="translate(32 32)" stroke="#fff" stroke-width="4.2" stroke-linecap="round">
+    <path d="M0-17V-6M0 6V17M-17 0H-6M6 0H17"/>
+    <path d="M-12-12l8 8M4 4l8 8M12-12L4-4M-4 4l-8 8"/>
+    <path d="M-16-7l10 4M6 3l10 4M7-16L3-6M-3 6l-4 10"/>
+  </g>
+</svg>

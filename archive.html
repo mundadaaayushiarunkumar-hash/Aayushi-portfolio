@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en" data-lights="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="A playful personal archive of photographs, food, small joys and things Aayushi enjoys.">
+<title>AayushiMundada</title>
+<link rel="stylesheet" href="archive.css?v=100">
+<style>
+  html[data-lights="on"] #archive-page-title{
+    color:#fff!important;
+    -webkit-text-fill-color:#fff!important;
+  }
+  html[data-lights="on"] #archive-page-title{
+    position:relative;
+    display:inline-block;
+    color:transparent!important;
+    -webkit-text-fill-color:transparent!important;
+  }
+  html[data-lights="on"] #archive-page-title::after{
+    content:"My Archive";
+    position:absolute;
+    inset:0;
+    color:#fff!important;
+    -webkit-text-fill-color:#fff!important;
+    opacity:1;
+    pointer-events:none;
+  }
+</style>
+</head>
+<body>
+<header class="archive-topbar">
+  <a class="back-link" href="index.html#home">← Portfolio</a>
+  <div class="archive-actions">
+    <div class="zoom-controls" aria-label="Archive zoom controls">
+      <button type="button" id="zoom-out" aria-label="Zoom out">−</button>
+      <button type="button" id="zoom-fit">Fit</button>
+      <button type="button" id="zoom-in" aria-label="Zoom in">+</button>
+    </div>
+    <button class="light-toggle" id="light-toggle" type="button" aria-pressed="false" aria-label="Turn fairy lights on">
+      <span class="switch-label" aria-hidden="true">Lights</span>
+      <span class="switch-word switch-off" aria-hidden="true">OFF</span>
+      <span class="toggle-track" aria-hidden="true"><span class="toggle-knob"></span></span>
+      <span class="switch-word switch-on" aria-hidden="true">ON</span>
+      <span class="toggle-label">Lights off</span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <div class="archive-intro">
+    <h1 id="archive-page-title">My Archive</h1>
+    <p class="archive-note">A compilation of a few things I love, enjoy and believe in.<br>Drag them around, click to explore, and switch the lights on or off.</p>
+  </div>
+  <div class="board-wrap">
+    <div class="board-stage" id="board-stage">
+    <section class="archive-board" id="archive-board" aria-label="Interactive personal archive board">
+      <div class="board-scene" aria-hidden="true">
+        <img class="board-grid board-grid-off" src="assets/archive-grid-transparent.png" alt="">
+        <img class="board-grid board-grid-on" src="assets/archive-grid-lights-on.png" alt="">
+      </div>
+      <img class="vine-layer" src="assets/archive-vine.png" alt="" aria-hidden="true">
+      <div class="fairy-lights" aria-hidden="true">
+        <svg viewBox="0 0 1200 1600" preserveAspectRatio="none">
+          <path d="M-30 115 C175 50 355 190 590 105 S995 42 1230 145"/>
+          <path d="M1190 160 C1060 300 930 245 805 370 S515 520 335 420 S85 425 -20 575"/>
+          <path d="M0 675 C190 555 360 760 565 665 S915 555 1210 745"/>
+          <path d="M1195 810 C1010 905 880 810 715 945 S355 1080 35 945"/>
+          <path d="M0 1135 C210 1010 390 1220 610 1115 S985 1030 1210 1190"/>
+          <path d="M1190 1300 C990 1415 825 1300 630 1440 S255 1500 -20 1390"/>
+        </svg>
+        <i style="--bx:5%;--by:7%;--br:-8deg"></i><i style="--bx:17%;--by:6%;--br:5deg"></i><i style="--bx:30%;--by:10%;--br:-6deg"></i><i style="--bx:44%;--by:7%;--br:8deg"></i><i style="--bx:59%;--by:9%;--br:-4deg"></i><i style="--bx:74%;--by:5%;--br:6deg"></i><i style="--bx:89%;--by:8%;--br:-7deg"></i>
+        <i style="--bx:91%;--by:20%;--br:7deg"></i><i style="--bx:78%;--by:24%;--br:-5deg"></i><i style="--bx:62%;--by:29%;--br:8deg"></i><i style="--bx:47%;--by:31%;--br:-6deg"></i><i style="--bx:31%;--by:27%;--br:5deg"></i><i style="--bx:14%;--by:30%;--br:-8deg"></i>
+        <i style="--bx:8%;--by:42%;--br:8deg"></i><i style="--bx:24%;--by:40%;--br:-5deg"></i><i style="--bx:41%;--by:44%;--br:7deg"></i><i style="--bx:58%;--by:41%;--br:-6deg"></i><i style="--bx:76%;--by:39%;--br:5deg"></i><i style="--bx:93%;--by:45%;--br:-8deg"></i>
+        <i style="--bx:89%;--by:56%;--br:7deg"></i><i style="--bx:72%;--by:59%;--br:-5deg"></i><i style="--bx:54%;--by:57%;--br:8deg"></i><i style="--bx:36%;--by:64%;--br:-6deg"></i><i style="--bx:17%;--by:59%;--br:5deg"></i>
+        <i style="--bx:8%;--by:72%;--br:-8deg"></i><i style="--bx:26%;--by:70%;--br:6deg"></i><i style="--bx:45%;--by:75%;--br:-6deg"></i><i style="--bx:63%;--by:70%;--br:8deg"></i><i style="--bx:81%;--by:73%;--br:-5deg"></i><i style="--bx:94%;--by:77%;--br:6deg"></i>
+        <i style="--bx:88%;--by:87%;--br:-6deg"></i><i style="--bx:69%;--by:91%;--br:8deg"></i><i style="--bx:50%;--by:88%;--br:-5deg"></i><i style="--bx:30%;--by:94%;--br:6deg"></i><i style="--bx:11%;--by:89%;--br:-7deg"></i>
+      </div>
+
+      <div class="archive-item keepsake perched bunny-keepsake" style="--x:7%;--y:-6%;--r:-3deg" aria-label="Aayushi's lavender bunny plush sitting on the frame"><img src="assets/archive-bunny-complete.webp" alt="A lavender and cream floppy-eared bunny plush"></div>
+      <div class="archive-item keepsake perched burger-keepsake" style="--x:70%;--y:-5%;--r:3deg" aria-label="Aayushi's burger plush sitting on the frame"><img src="assets/archive-burger-complete.webp" alt="A smiling burger plush"></div>
+
+      <article class="archive-item polaroid wide photo-1" data-photo-src="assets/archive-photo-photography.webp" style="--x:5%;--y:8%;--r:-4deg" tabindex="0" role="button" aria-label="Enlarge Aayushi's architecture photograph">
+        <span class="clip clip-lavender" aria-hidden="true"></span><div class="photo"><img src="assets/archive-photo-photography.webp" alt="An old tree beside historic architecture photographed by Aayushi"></div><p>I enjoy photographing places, textures, and little details that make me stop and look twice.</p>
+      </article>
+      <article class="archive-item polaroid photo-2" data-photo-src="assets/archive-photo-cycling.webp" style="--x:39%;--y:6%;--r:3deg" tabindex="0" role="button" aria-label="Enlarge Aayushi's cycling photograph">
+        <span class="clip clip-silver" aria-hidden="true"></span><div class="photo"><img src="assets/archive-photo-cycling.webp" alt="Aayushi cycling on a bridge"></div><p>I love trying new activities, especially when they come with a little adventure.</p>
+      </article>
+      <article class="archive-item polaroid small photo-3" data-photo-src="assets/archive-photo-travel.webp" style="--x:73%;--y:10%;--r:-2deg" tabindex="0" role="button" aria-label="Enlarge Aayushi's travel photograph">
+        <span class="clip clip-lavender" aria-hidden="true"></span><div class="photo"><img src="assets/archive-photo-travel.webp" alt="Aayushi standing in front of a waterfall"></div><p>Travelling lets me experience unfamiliar places, cultures, and perspectives beyond my everyday world.</p>
+      </article>
+
+      <aside class="archive-item quote-note lilac-note" style="--x:8%;--y:38%;--r:2deg">
+        <p>“Don’t lose the parts of you that make you, you.”</p>
+      </aside>
+      <article class="archive-item polaroid wide photo-4" data-photo-src="assets/archive-photo-childhood.webp" style="--x:36%;--y:34%;--r:-3deg" tabindex="0" role="button" aria-label="Enlarge Aayushi's childhood photograph">
+        <span class="clip clip-silver" aria-hidden="true"></span><div class="photo"><img src="assets/archive-photo-childhood.webp" alt="A childhood photograph of Aayushi"></div><p>A reminder to keep becoming the person my younger self was already imagining.</p>
+      </article>
+      <div class="archive-item keepsake hanging dino-keepsake" style="--x:77%;--y:34%;--r:5deg" aria-label="Aayushi's pink dinosaur plush hanging from the grid"><span class="hanger-loop"></span><img src="assets/archive-dinosaur.png" alt="A pink dinosaur plush with teal spikes and heart markings"></div>
+
+      <article class="archive-item polaroid small photo-5" data-photo-src="assets/archive-photo-art.webp" style="--x:6%;--y:61%;--r:4deg" tabindex="0" role="button" aria-label="Enlarge Aayushi painting a mural">
+        <span class="clip clip-lavender" aria-hidden="true"></span><div class="photo"><img src="assets/archive-photo-art.webp" alt="Aayushi painting a colourful mural"></div><p>I enjoy creating art across different mediums, scales, and surfaces.</p>
+      </article>
+      <div class="archive-item keepsake hanging sipper-keepsake" style="--x:37%;--y:59%;--r:-5deg" aria-label="A mini keychain version of Aayushi's lavender Nestasia sipper"><img src="assets/archive-sipper-keychain.png" alt="A lavender Nestasia tumbler keychain with gold rings and a pink flower charm"></div>
+      <aside class="archive-item quote-note yellow-note" style="--x:61%;--y:48%;--r:-2deg">
+        <p>“Not everything you create needs to become something.”</p>
+      </aside>
+
+      <aside class="archive-item quote-note compact-note song-note" style="--x:49%;--y:27%;--r:2deg">
+        <p>“You’re on your own, kid.”</p>
+      </aside>
+
+      <article class="archive-item polaroid photo-7" data-photo-src="assets/archive-photo-baking.webp" style="--x:70%;--y:61%;--r:-3deg" tabindex="0" role="button" aria-label="Enlarge Aayushi's baking photograph">
+        <span class="clip clip-lavender" aria-hidden="true"></span><div class="photo"><img src="assets/archive-photo-baking.webp" alt="A chocolate cake baked by Aayushi"></div><p>Cooking and baking help me slow down, experiment freely, and reset after a busy day.</p>
+      </article>
+
+      <aside class="archive-item quote-note compact-note courage-note" style="--x:29%;--y:62%;--r:-5deg"><p>“Do it scared. Do it imperfectly. Just don’t stop yourself from trying.”</p></aside>
+      <article class="archive-item polaroid photo-6" data-photo-src="assets/archive-photo-sketching.webp" style="--x:33%;--y:78%;--r:2deg" tabindex="0" role="button" aria-label="Enlarge Aayushi's sketches">
+        <span class="clip clip-silver" aria-hidden="true"></span><div class="photo"><img src="assets/archive-photo-sketching.webp" alt="A page of character sketches by Aayushi"></div><p>Sketching is how I explore ideas, observations, and anything that catches my attention.</p>
+      </article>
+      <div class="archive-item keepsake hanging fries-keepsake" style="--x:78%;--y:79%;--r:4deg" aria-label="Aayushi's smiling fries plush hanging from the grid"><span class="hanger-loop"></span><img src="assets/archive-fries.png" alt="A smiling red and yellow fries plush"></div>
+      <aside class="archive-item quote-note compact-note little-things-note" style="--x:84%;--y:28%;--r:3deg"><p>“I hope I never become too old to be excited about little things.”</p></aside>
+      <aside class="archive-item quote-note cream-note" style="--x:68%;--y:89%;--r:-3deg"><p>“There are versions of me I haven’t met yet.”</p></aside>
+    </section>
+    </div>
+  </div>
+</main>
+
+<dialog class="photo-dialog" id="photo-dialog">
+  <button type="button" class="dialog-close" aria-label="Close enlarged photo">×</button>
+  <img class="dialog-photo" src="" alt="">
+  <p></p>
+</dialog>
+
+<script src="archive.js?v=100"></script>
+</body>
+</html>
